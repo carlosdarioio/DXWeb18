@@ -1,0 +1,21 @@
+﻿.bg-nav {
+/*background-color:#00a8e2;*/
+/*background-color:#e0e0e0;*/
+ border-bottom: 1px solid #00a8e2;
+}
+
+body {
+ background-size: 150px;
+  background-repeat: space;
+  /*background-image:url("../Images/overlay.png");*/
+  /*background-color:red;*/
+}
+
+.bcody {
+background-color:#e0e0e0;
+}
+
+.Pie {
+text-align:center;
+
+}

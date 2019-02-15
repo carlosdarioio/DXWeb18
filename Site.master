@@ -1,0 +1,126 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>INFINITY</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" /> 
+    <link href="~/Content/css.css" rel="stylesheet" /> 
+    <link href="~/Content/Site.css" rel="stylesheet" /> 
+
+    <script type="text/javascript" src="Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="Scripts/popper.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+<link rel="icon" type="image/png" href="Images/favicon.ico"/>
+</head>
+<body>
+    <form runat="server">
+        
+            <nav class="navbar navbar-expand-lg navbar-light bg-nav"><!--fixed-top-->
+                <div class=" container-fluid">
+                    <div>                        
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topMenu" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!--<img src=" Images/nav1.png " class=" figure-img" alt="Alternate Text" />-->
+                        <img src=" Images/Logo Blog Infinity2.png " class=" figure-img" width="220px" height:"190px" alt="Alternate Text" />
+                        <!--<img src="Images/Logo%20Blog%20Infinity2.png" width="180px" height:"90px" />-->
+                        
+                        <a class="navbar-brand" href="#"></a>
+                    </div>
+                    <div class="collapse navbar-collapse justify-content-center" id="topMenu">
+                        <dx:BootstrapMenu ID="BootstrapMenu1" runat="server" ShowPopOutImages="True" ItemAutoWidth="false" ClientInstanceName="topMenu">
+                            <CssClasses Control="top-menu" Menu="navbar-nav" MenuItem="navbar-brand" />
+                            <Items>
+                                <dx:BootstrapMenuItem Text="Inicio" Name="Inicio" NavigateUrl="Default.aspx">
+                                </dx:BootstrapMenuItem>
+
+
+                                <dx:BootstrapMenuItem Text="Reconocimientos" Name="Reconocimiento" NavigateUrl="VendedoresDelMes.aspx">
+                                </dx:BootstrapMenuItem>
+                                
+                                <dx:BootstrapMenuItem Text="Directorio" Name="Telefonos" NavigateUrl="Telefonos.aspx">
+                                </dx:BootstrapMenuItem>                                
+                                 <dx:BootstrapMenuItem Text="SAPWEB">
+                                    <Items>
+                                        <dx:BootstrapMenuItem Text="Caja" NavigateUrl="http://10.1.201.5/FEMOSA/">
+                                        </dx:BootstrapMenuItem>
+                                        <dx:BootstrapMenuItem Text="Creditos" NavigateUrl="http://10.1.201.5/FEMOSA/">
+                                        </dx:BootstrapMenuItem>
+                                        <dx:BootstrapMenuItem Text="Despacho" NavigateUrl="http://10.1.201.5/Bodega/">
+                                        </dx:BootstrapMenuItem>
+                                    </Items>
+                                </dx:BootstrapMenuItem>
+                                <dx:BootstrapMenuItem Text="E-learning" NavigateUrl="http://10.1.201.5:8080/Learning/">
+                                </dx:BootstrapMenuItem>
+                                <dx:BootstrapMenuItem Text="Centro de Servicio" NavigateUrl="http://10.1.201.5:8080/Soporte">
+                                </dx:BootstrapMenuItem>
+                                <dx:BootstrapMenuItem Text="Denuncia" Name="Denuncia" NavigateUrl="Denuncia.aspx">
+                                </dx:BootstrapMenuItem>
+                            </Items>
+                        </dx:BootstrapMenu>
+                    </div>
+                    <%--
+                     <div class="collapse navbar-collapse justify-content-right" id="Div1">
+                        <dx:BootstrapMenu ID="BootstrapMenu2" runat="server" ShowPopOutImages="True" ItemAutoWidth="false" ClientInstanceName="topMenu">
+                             <CssClasses MenuItem="lead " />
+                            <Items>
+                                
+                            </Items>
+                        </dx:BootstrapMenu>
+                         <%--<img src=" Images/nav2.png " class="figure-img" alt="Alternate Text" />-- %>
+                    </div>
+                --%>
+
+                    
+                  
+                </div>
+            </nav>
+
+            
+        <div class="container bcody">
+                <hr />
+                <asp:ContentPlaceHolder ID="Content" runat="server">
+                </asp:ContentPlaceHolder>
+            
+                <hr/>
+
+                <footer class="Pie container-fluid">
+                    <div class="row">                        
+                        <div class="col-md-12" style="text-align:center;">
+                            <a href="http://10.1.201.5/infinity/Calendario.aspx" >Calendario</a> |
+                            <a href="http://10.1.201.5:8080/Learning" >Learning</a> |
+                            <a href="http://10.1.201.5:8080/Blog_Infinity/" >Blog</a> |
+                            <a href="http://10.1.201.5:8080/Soporte" >Centro de servicios</a> |
+                            <a href="http://10.1.201.5:/FEMOSA" >SAPWEB</a> |
+                            <a href="http://10.1.201.5:/INFINITY" >INFINITY</a> 
+                            <p>INFINITY copyright &copy; <%: DateTime.Now.Year %></p>    
+                        </div>                       
+                    </div>
+                    
+                    
+                    
+                </footer>
+            </div>
+
+        	      <!--Google Analityc -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+		m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-99123445-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<!-- Fin Google Analaityc-->
+
+    </form>
+
+
+</body>
+</html>
